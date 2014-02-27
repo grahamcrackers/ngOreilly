@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="app">
+<header>
+    <script src="bower_components/bootstrap/dist/css/bootstrap.min.css"></script>
+</header>
+<body ng-controller="TextController">
+<p>{{messages.someText}}</p>
+
+<hr>
+
+<form  ng-controller="StartUpCtrl">
+    Starting: <input ng-model="funding.startingEstimate"/> <br/>
+    Recommendation: {{funding.needed}} <br/>
+    <button ng-click="requestFunding()">Fund my startup!</button> <br/>
+    <button ng-click="reset()">Reset</button> <br/>
+</form>
+
+<hr>
+
+<ul ng-controller='StudentListController'>
+    <li ng-repeat="student in students">
+        <a ng-href='/student/view/{{student.id}}'> {{student.name}} </a>
+    </li>
+    <button ng-click="insertTom()">Insert Tom</button>
+</ul>
+
+<hr>
+
+<table ng-controller='AlbumController'>
+    <tr ng-repeat="track in album">
+        <td>{{$index + 1}}</td>
+        <td>{{track.name}}</td>
+        <td>{{track.duration}}</td>
+    </tr>
+</table>
+
+<hr/>
+
+<div ng-controller='DeathRayMenuCtrl'>
+    <button ng-click='toggleMenu()'>Toggle Menu</button>
+    <ul ng-show='menuState.show'>
+        <li ng-click="stun()">Stun</li>
+        <li ng-click="disintigrate()">Disintegrate</li>
+        <li ng-click="erase()">Erase from history</li>
+    </ul>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="controllers/controllers.js"></script>
+<script src="controllers/deathRayCtrl.js"></script>
+
+</body>
+</html>
