@@ -1,33 +1,22 @@
 <!doctype html>
-<html ng-app="app">
+<html ng-app="AMail">
 <header>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!--<link rel="stylesheet" href="bower_components/bootstrap/superhero.bootstrap.min.css" />-->
     <link rel="stylesheet" href="app/styles.css" />
 
 </header>
-<body ng-controller="TextController">
+<body>
+    <h1>A-Mail</h1>
+    <div ng-view></div>
 
-<div class="container">
-
-    <div ng-controller="CartController">
-        <div ng-repeat="item in items">
-            <span>{{item.title}}</span>
-            <input ng-model="item.quantity"/>
-            <span>{{item.price | currency}}</span>
-            <span>{{item.price * item.quantity | currency}}</span>
-        </div>
-        <div>Total: {{totalCart() | currency}}</div>
-        <div>Discount: {{bill.discount | currency}}</div>
-        <div>Subtotal: {{subtotal() | currency}}</div>
-    </div>
-
-</div>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="app/controllers/controllers.js"></script>
-<script src="app/controllers/deathRayCtrl.js"></script>
+<script src="app/controllers/ctrls.js"></script>
+<!--<script src="app/controllers/deathRayCtrl.js"></script>-->
+<!--<script src="app/controllers/CartCtrl.js"></script>-->
 
 </body>
 </html>
