@@ -1,0 +1,15 @@
+.menu-disabled-true {
+    color: grey;
+}
+
+.error {
+    background-color: red;
+}
+
+.warning {
+    background-color: yellow;
+}
+
+.selected {
+    background-color: lightgreen;
+}
